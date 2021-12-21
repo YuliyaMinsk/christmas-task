@@ -1,0 +1,40 @@
+@import "../../../../../abstract/sass/constants";
+
+.toy-item {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 260px;
+  height: 260px;
+  padding: 10px;
+  padding-left: 10px;
+  border-radius: 10px;
+  border: 2px solid $color-additional;
+  background-color: rgba(16, 44, 97, 0.3);
+  backdrop-filter: blur(6px);
+  user-select: none;
+  cursor: pointer;
+
+  &.selected {
+    border: 2px solid $color-primary;
+    background-color: rgba(24, 61, 129, 0.3);
+  }
+}
+
+.toy-title {
+  width: 100%;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+
+.toy-image {
+  width: 100px;
+  height: 100px;
+  margin-right: 5px;
+}
+
+.toy-description {
+  width: 150px;
+}
+

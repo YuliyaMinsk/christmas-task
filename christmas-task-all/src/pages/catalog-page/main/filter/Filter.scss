@@ -1,0 +1,265 @@
+@import "../../../../abstract/sass/constants";
+@import "../../../../abstract/sass/placeholder";
+@import "../../../../abstract/sass/mixin.scss";
+
+.filter-box {
+  display: flex;
+  justify-content: center;
+  width: 1170px;
+  height: 290px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  padding: 10px;
+  border-radius: 10px;
+  border: 2px solid $color-additional;
+  background-color: rgba(16, 44, 97, 0.3);
+  backdrop-filter: blur(6px);
+  user-select: none;
+  cursor: pointer;
+}
+
+.filter-value {
+  width: 360px;
+  padding: 15px;
+}
+
+.filter-range {
+  width: 360px;
+  padding: 15px;
+}
+
+.filter-sort {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 330px;
+  padding: 15px;
+}
+
+.filter-list {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  height: 60px;
+}
+
+.filter-title {
+  text-align: center;
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+.filter-name {
+  margin-right: 20px;
+}
+
+.filter-count,
+.filter-year {
+  height: 120px;
+}
+
+.button-shape {
+  position: relative;
+  width: 40px;
+  height: 40px;
+  margin: 10px 7px;
+  border: 0;
+  outline: 0;
+  background-color: transparent;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center center;
+  cursor: pointer;
+  @extend %transition;
+
+  &.button-ball {
+    background-image: url("../../../../assets/svg/ball.svg");
+  }
+  &.button-bell {
+    background-image: url("../../../../assets/svg/bell.svg");
+  }
+  &.button-cone {
+    background-image: url("../../../../assets/svg/cone.svg");
+  }
+  &.button-snowflake {
+    background-image: url("../../../../assets/svg/snowflake.svg");
+  }
+  &.button-figure {
+    background-image: url("../../../../assets/svg/toy.svg");
+  }
+  &.active {
+    filter: invert(55%) sepia(12%) saturate(6143%) hue-rotate(328deg) brightness(95%) contrast(84%);
+  }
+}
+
+.button-size {
+  position: relative;
+  width: 50px;
+  height: 50px;
+  margin: 5px 5px;
+  border: 0;
+  outline: 0;
+  background-image: url("../../../../assets/svg/ball.svg");
+  background-color: transparent;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center center;
+  cursor: pointer;
+  @extend %transition;
+
+  &.button-big {
+    background-size: 50px 50px;
+  }
+  &.button-medium {
+    background-size: 40px 40px;
+  }
+  &.button-small {
+    background-size: 32px 32px;
+  }
+  &.active {
+    filter: invert(55%) sepia(12%) saturate(6143%) hue-rotate(328deg) brightness(95%) contrast(84%);
+  }
+}
+
+.button-color {
+  position: relative;
+  width: 30px;
+  height: 30px;
+  margin: 15px 10px;
+  border: 2px solid $color-additional;
+  border-radius: 5px;
+  outline: 0;
+  background-color: transparent;
+  cursor: pointer;
+  @extend %transition;
+
+  &.button-white {
+    background-color: $color-light;
+  }
+  &.button-yellow {
+    background-color: #FDD700;
+  }
+  &.button-red {
+    background-color: #FD0000;
+  }
+  &.button-blue {
+    background-color: #2199EB;
+  }
+  &.button-green {
+    background-color: #08AA05;
+  }
+  &.button-favorite {
+    // background-color: #2199EB;
+    border: 2px solid $color-additional;
+  }
+  &.active {
+    border: solid $color-primary;
+  }
+  &.active::after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 4px;
+    left: 7px;
+    width: 6px;
+    height: 10px;
+    border: solid $color-primary;
+    border-width: 0 4px 4px 0;
+    transform: rotate(45deg);
+  }
+}
+
+.button-default {
+  text-align: center;
+  padding: 10px 15px;
+  margin: 10px 0;
+  border-radius: 20px;
+  color: $color-light;
+  border: 2px solid $color-additional;
+  background-color: rgba(24, 61, 129, 0.3);
+  backdrop-filter: blur(6px);
+  cursor: pointer;
+  @include font($font4, #{$font4 + 0.5rem}, 300);
+  @extend %transition;
+  &:hover {
+    color: $color-primary;
+    background-color: rgba(31, 83, 179, 0.3);
+  }
+}
+
+.filter-sort-select {
+  outline: none;
+  padding: 10px 15px;
+  margin-top: 20px;
+  margin-bottom: 40px;
+  border-radius: 20px;
+  color: $color-light;
+  border: 2px solid $color-additional;
+  background-color: rgba(24, 61, 129, 0.5);
+  backdrop-filter: blur(6px);
+  cursor: pointer;
+  @extend %transition;
+  & option {
+    color: inherit;
+    background-color: rgba(24, 61, 129, 1);
+  }
+}
+
+
+// SLIDER
+
+.range-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 5px 0;
+}
+
+.range-num {
+  display: inline-block;
+  width: 40px;
+  text-align: center;
+  padding: 5px 10px;
+  border-radius: 10px;
+  border: 2px solid $color-additional;
+}
+
+.noUi-target {
+  display: inline-block;
+  width: 260px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-left: 20px;
+  margin-right: 20px;
+  box-shadow: none;
+  border: none;
+  background: $color-light;
+}
+
+.noUi-connect {
+  background: $color-additional;
+}
+
+.noUi-handle {
+  background: $color-light;
+  box-shadow: none;
+  border: 1px solid $color-additional
+}
+
+.noUi-horizontal .noUi-tooltip {
+  transform: translate(-50%, 0);
+  left: 50%;
+  bottom: -160%;
+}
+
+.noUi-tooltip {
+  display: block;
+  position: absolute;
+  border: 1px solid #D9D9D9;
+  border-radius: 3px;
+  background: $color-light;
+  color: $color-dark;
+  padding: 5px;
+  text-align: center;
+  white-space: nowrap;
+}

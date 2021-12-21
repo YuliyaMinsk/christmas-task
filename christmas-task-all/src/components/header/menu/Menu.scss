@@ -1,0 +1,30 @@
+@import "../../../abstract/sass/constants";
+@import "../../../abstract/sass/mixin";
+
+.menu {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.menu-left {
+  display: flex;
+  align-items: center;
+}
+
+.menu-right {
+  display: flex;
+  align-items: center;
+}
+
+.menu-logo {
+  height: 50px;
+  pointer-events: none;
+  margin-right: 20px;
+}
+
+.menu-link {
+  margin: 0 20px;
+  @include font($font4, #{$font4}, 300);
+  // color: $color-additional;
+}

@@ -1,0 +1,11 @@
+@import "../../../../abstract/sass/constants";
+
+.toy-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.sorry-text {
+  text-align: center;
+}

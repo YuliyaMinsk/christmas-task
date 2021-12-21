@@ -1,0 +1,50 @@
+@import "abstract/sass/constants";
+@import "abstract/sass/placeholder";
+@import "abstract/sass/mixin";
+
+body {
+  margin: 0;
+  padding: 0;
+
+  width: 100vw;
+  height: 100vh;
+  background-image: url('./assets/images/background-pages2.jpg');
+  background-repeat: repeat;
+
+  @extend %font-primary;
+  @include font($font5, #{$font5 + 0.5rem}, 300);
+  color: $color-light;
+}
+
+h1 {
+  @include font($font1, #{$font1});
+}
+
+h2 {
+  @include font($font2, #{$font2});
+}
+
+h3 {
+  @include font($font3, #{$font3});  
+}
+
+h4 {
+  @include font($font4, #{$font4});  
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  &:hover {
+    color: $color-primary;
+    transition: all 0.2s linear;
+  }
+}
+
+ul[class],
+ol[class],
+p {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
