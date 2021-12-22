@@ -1,5 +1,6 @@
 @import "../../../abstract/sass/constants";
 @import "../../../abstract/sass/mixin";
+@import "../../../abstract/sass/placeholder";
 
 .menu {
   display: flex;
@@ -19,12 +20,22 @@
 
 .menu-logo {
   height: 50px;
-  pointer-events: none;
+  width: 40px;
   margin-right: 20px;
+  background-image: url("../../../assets/svg/tree.svg");
+  background-color: transparent;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center center;
+  cursor: pointer;
+  @extend %transition;
+
+  &:hover {
+    background-image: url("../../../assets/svg/tree-hover.svg");
+  }
 }
 
 .menu-link {
   margin: 0 20px;
   @include font($font4, #{$font4}, 300);
-  // color: $color-additional;
 }

@@ -1,7 +1,10 @@
 export class Constants {
   static MENU_CATALOG = 'Игрушки';
   static MENU_TREE = 'Ёлка';
-  static MENU_SEARCH = "Найти игрушку";
+  static MENU_SEARCH = 'Найти игрушку';
+
+  static WELCOME_TXT = 'Новогодняя игра \n "Наряди ёлку"';
+  static WELCOME_BUTTON = 'Начать';
 
   static FILTER_VALUE = 'Фильтр по значению';
   static FILTER_RANGE = 'Фильтр по диапазону';

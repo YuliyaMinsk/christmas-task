@@ -1,0 +1,44 @@
+@import "../../abstract/sass/constants";
+@import "../../abstract/sass/placeholder";
+@import "../../abstract/sass/mixin";
+
+.welcome-page {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: stretch;
+  margin: 0 auto;
+  height: 80vh;
+  width: 600px;
+  @include font($font2, #{$font2 + 1.5rem}, 300);
+}
+
+.welcome-text {
+  padding: 50px;
+  border-radius: 25px;
+  border: 2px solid $color-additional;
+  background-color: rgba(16, 44, 97, 0.3);
+  backdrop-filter: blur(6px);
+  user-select: none;
+  margin-bottom: 40px;
+  white-space: pre;
+  text-align: center;
+}
+
+.welcome-button {
+  text-align: center;
+  padding: 10px 15px;
+  margin: 10px 0;
+  border-radius: 20px;
+  color: $color-light;
+  border: 2px solid $color-additional;
+  background-color: rgba(24, 61, 129, 0.3);
+  backdrop-filter: blur(6px);
+  cursor: pointer;
+  @include font($font4, #{$font4 + 0.5rem}, 300);
+  @extend %transition;
+  &:hover {
+    color: $color-primary;
+    background-color: rgba(31, 83, 179, 0.3);
+  }
+}

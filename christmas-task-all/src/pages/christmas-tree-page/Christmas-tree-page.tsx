@@ -2,13 +2,13 @@ import React from 'react';
 
 // import Main from "./main/Main";
 
- function WelcomePage() {
+ function ChristmasTreePage() {
 
   return (
     <>
-      {/* <Main/> */}
+      <p></p>
     </>
   );
 }
 
-export default WelcomePage;
+export default ChristmasTreePage;
