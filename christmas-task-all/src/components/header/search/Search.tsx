@@ -6,9 +6,8 @@ import { searchCards, searchClear } from '../../../redux/actions';
 import { appState } from '../../../redux/reducers';
 import './Search.scss';
 
-
 function Search() {
-
+  
   const { search } = useSelector((state: appState) => state);
 
   const isActiveCloseSearch = (search.length) ? 'active' : '';
