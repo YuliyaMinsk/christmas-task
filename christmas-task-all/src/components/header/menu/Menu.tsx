@@ -1,5 +1,5 @@
 import React from 'react';
-import { useLocation } from 'react-router-dom'
+import { Link, useLocation } from 'react-router-dom'
 
 import { Constants } from '../../../abstract/Constants';
 import Search from '../search/Search';
@@ -13,9 +13,9 @@ function Menu() {
   return (
     <nav className="menu menu-top">
       <div className="menu-left">
-        <a className="menu-logo" href="/"></a>
-        <a className="menu-link" href="/catalog">{Constants.MENU_CATALOG}</a>
-        <a className="menu-link" href="/tree">{Constants.MENU_TREE}</a>
+        <Link className="menu-logo" to="/"></Link>
+        <Link className="menu-link" to="/catalog">{Constants.MENU_CATALOG}</Link>
+        <Link className="menu-link" to="/tree">{Constants.MENU_TREE}</Link>
       </div>
       { location.pathname === "/catalog" &&
       <div className="menu-right">

@@ -2,13 +2,13 @@ import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 
 import { Constants } from '../../../abstract/Constants';
-import { searchCards, searchClear } from '../../../redux/actions';
-import { appState } from '../../../redux/reducers';
+import { catalogState } from '../../../abstract/types';
+import { searchCards, searchClear } from '../../../redux/actions-catalog';
 import './Search.scss';
 
 function Search() {
   
-  const { search } = useSelector((state: appState) => state);
+  const { search } = useSelector((state: catalogState) => state);
 
   const isActiveCloseSearch = (search.length) ? 'active' : '';
   

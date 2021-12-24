@@ -11,6 +11,7 @@ import './Welcome-page.scss';
   return (
     <div className="welcome-page">      
       <p className="welcome-text">{Constants.WELCOME_TXT}</p>
+      
       <button className="welcome-button" onClick={() => navigate("/catalog")}>{Constants.WELCOME_BUTTON}</button>
     </div>
   );

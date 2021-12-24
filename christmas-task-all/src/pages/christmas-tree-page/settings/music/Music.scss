@@ -1,0 +1,22 @@
+@import "../../../../abstract/sass/placeholder";
+
+.button-music {
+  position: relative;
+  width: 50px;
+  height: 50px;
+  margin: 5px 5px;
+  border: 0;
+  outline: 0;
+  background-image: url("../../../../assets/svg/mute.svg");  
+  background-color: transparent;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center center;
+  cursor: pointer;
+  @extend %transition;
+
+  &.active {
+    background-image: url("../../../../assets/svg/audio.svg");
+    filter: invert(55%) sepia(12%) saturate(6143%) hue-rotate(328deg) brightness(95%) contrast(84%);   
+  }
+}

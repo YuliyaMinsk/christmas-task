@@ -1,13 +1,16 @@
 import React from 'react';
 
-// import Main from "./main/Main";
+import "./Christmas-tree-page.scss";
+import Settings from './settings/Settings';
 
  function ChristmasTreePage() {
 
   return (
-    <>
-      <p></p>
-    </>
+    <main className="main">
+      <div className="main-container">
+        <Settings />
+      </div>
+    </main>
   );
 }
 

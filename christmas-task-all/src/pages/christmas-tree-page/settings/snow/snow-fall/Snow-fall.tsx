@@ -1,8 +1,8 @@
 import React from 'react';
 
-import './Snow.scss';
+import './Snow-fall.scss';
 
- function Snow() {
+ function SnowFall() {
   return (
     <div className="wrapper">      
       <div className="snow layer1 a"></div>
@@ -15,4 +15,4 @@ import './Snow.scss';
   );
 }
 
-export default Snow;
+export default SnowFall;
