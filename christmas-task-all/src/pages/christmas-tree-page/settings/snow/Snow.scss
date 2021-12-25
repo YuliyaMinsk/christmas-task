@@ -15,6 +15,9 @@
   cursor: pointer;
   @extend %transition;
 
+  &:hover {
+    filter: invert(55%) sepia(12%) saturate(6143%) hue-rotate(328deg) brightness(95%) contrast(84%);
+  }
   &.active {
     filter: invert(55%) sepia(12%) saturate(6143%) hue-rotate(328deg) brightness(95%) contrast(84%);    
   }

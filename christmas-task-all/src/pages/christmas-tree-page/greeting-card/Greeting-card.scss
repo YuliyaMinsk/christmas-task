@@ -1,0 +1,29 @@
+.greeting-card {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.selected-background {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+  position: relative;
+  margin: 10px;
+  width: 600px;
+  height: 600px;
+  border: 0;
+  outline: 0;  
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-image: url("../../../assets/images/bg/1.jpg");
+}
+
+.selected-tree {
+  display: block;
+  width: 350px;
+  height: 500px;
+}

@@ -1,3 +1,5 @@
+@import "../../common/sass/constants";
+
 .christmas-tree-main {
   display: flex;
   justify-content: center;
@@ -10,18 +12,35 @@
 .christmas-tree-main-container {
   display: flex;
   justify-content: space-between;
-  width: 1200px;
+  width: 80%;
   gap: 10px;
+
+  @media screen and (max-width: $mq3) {
+    flex-direction: column;
+    width: 100%;
+  }
 }
 
 .left-side {
-  width: 30%;
+  width: 25%;
+  @media screen and (max-width: $mq3) {
+    width: 100%;
+  }
 }
 
 .right-side {
-  width: 30%;
+  width: 25%;
+  @media screen and (max-width: $mq3) {
+    width: 100%;
+  }
 }
 
 .main-side {
-  width: 40%;
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  @media screen and (max-width: $mq3) {
+    width: 100%;
+  }
 }

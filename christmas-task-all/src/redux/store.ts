@@ -10,9 +10,6 @@ const startState: appState = templateData !== null ? JSON.parse(templateData) : 
 
 const store = createStore(reducer, startState, devToolsEnhancer({}));
 
-console.log('1', store); // TO DELETE
-console.log('2', startState); // TO DELETE
-
 store.subscribe(() => {
   localStorage.setItem('save-settings', JSON.stringify(store.getState()));
 });

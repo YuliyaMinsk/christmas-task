@@ -11,12 +11,14 @@ function ToyItem(props: Toy) {
 
   const selectCardClass = toysData[parseInt(props.id)-1].select ? 'selected' : '';
 
+  const urlToyImage = process.env.PUBLIC_URL + '/toys/' + props.id + '.png';
+
   const dispatch = useDispatch();
 
   return (
     <li className={"toy-item " + selectCardClass} onClick={() => dispatch(select(props.id))}>
       <h3 className="toy-title">{props.name}</h3>
-      <img className="toy-image" src= {process.env.PUBLIC_URL + '/toys/' + props.id + '.png'} alt="" />
+      <img className="toy-image" src= {urlToyImage} />
       <div className="toy-description">
         <p>Количество: {props.count}</p>
         <p>Год покупки: {props.year}</p>

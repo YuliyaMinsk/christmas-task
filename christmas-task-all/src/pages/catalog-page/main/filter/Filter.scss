@@ -6,7 +6,7 @@
   display: flex;
   justify-content: center;
   width: 1170px;
-  height: 290px;
+  height: auto;
   margin-top: 20px;
   margin-bottom: 20px;
   padding: 10px;
@@ -16,6 +16,16 @@
   backdrop-filter: blur(6px);
   user-select: none;
   cursor: pointer;
+
+  @media screen and (max-width: 1200px) {
+    align-items: center;
+    flex-wrap: wrap;
+    width: 80%;
+  }
+  @media screen and (max-width: $mq2) {
+    flex-direction: column;
+    width: 100%;
+  }
 }
 
 .filter-value {
