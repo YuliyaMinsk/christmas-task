@@ -16,14 +16,13 @@
   height: 600px;
   border: 0;
   outline: 0;  
-  background-size: cover;
+  background-size: auto 100%;
   background-repeat: no-repeat;
   background-position: center center;
-  background-image: url("../../../assets/images/bg/1.jpg");
 }
 
 .selected-tree {
   display: block;
-  width: 350px;
-  height: 500px;
+  width: 406px;
+  height: 580px;
 }

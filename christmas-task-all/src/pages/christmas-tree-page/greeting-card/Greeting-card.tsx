@@ -1,3 +1,4 @@
+import { url } from 'inspector';
 import React from 'react';
 import { useSelector } from 'react-redux';
 
@@ -7,12 +8,24 @@ import tree3 from '../../../assets/images/tree/3.png'
 import tree4 from '../../../assets/images/tree/4.png'
 import tree5 from '../../../assets/images/tree/5.png'
 import tree6 from '../../../assets/images/tree/6.png'
+
+import background1 from '../../../assets/images/bg/1.jpg'
+import background2 from '../../../assets/images/bg/2.jpg'
+import background3 from '../../../assets/images/bg/3.jpg'
+import background4 from '../../../assets/images/bg/4.jpg'
+import background5 from '../../../assets/images/bg/5.jpg'
+import background6 from '../../../assets/images/bg/6.jpg'
+import background7 from '../../../assets/images/bg/7.jpg'
+import background8 from '../../../assets/images/bg/8.jpg'
+import background9 from '../../../assets/images/bg/9.jpg'
+import background10 from '../../../assets/images/bg/10.jpg'
+
 import { appState } from '../../../common/types';
 import './Greeting-card.scss';
 
  function GreetingCard() {
 
-  const { tree } = useSelector((state: appState) => state);
+  const { tree, background } = useSelector((state: appState) => state);
 
   function getUrlTree(tree: string) {
     switch (tree) {
@@ -28,9 +41,27 @@ import './Greeting-card.scss';
 
   const urlTree = getUrlTree(tree);
 
+  function getUrlBackground(background: string) {
+    switch (background) {
+      case 'background-1': return background1;
+      case 'background-2': return background2;
+      case 'background-3': return background3;
+      case 'background-4': return background4;
+      case 'background-5': return background5;
+      case 'background-6': return background6;
+      case 'background-7': return background7;
+      case 'background-8': return background8;
+      case 'background-9': return background9;
+      case 'background-10': return background10;
+      default: return background1;
+    }
+  }
+
+  const urlBackground = getUrlBackground(background);
+
   return (
     <div className='greeting-card'>      
-      <div className='selected-background'>
+      <div className='selected-background' style={{ backgroundImage: `url(${urlBackground})` }}>
         <img className='selected-tree' src={urlTree} />
       </div>
     </div>
