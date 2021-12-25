@@ -1,14 +1,13 @@
 import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 
-import { treeState } from '../../../../abstract/types';
-import { selectSnow } from '../../../../redux/actions-tree';
-import treeReducer from '../../../../redux/reducer-tree';
+import { appState } from '../../../../common/types';
+import { selectSnow } from '../../../../redux/actions';
 import './Snow.scss';
 
 function Snow() {
 
-  const { settings } = useSelector((state: treeState) => state.treeReducer);
+  const { settings } = useSelector((state: appState) => state);
   
   const isActiveButtonSnow = (settings.snow) ? 'active' : '';
 

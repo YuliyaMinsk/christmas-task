@@ -39,7 +39,12 @@ export interface range {
   end: number,
 }
 
-export interface catalogState {
+export interface settings {
+  snow: boolean,
+  music: boolean,
+}
+
+export interface appState {
   colors: colorsName,
   shapes: shapeName,
   size: sizeName,
@@ -49,10 +54,16 @@ export interface catalogState {
   sort: string,
   countSelected: number,
   search: string,
+
+  settings: settings,
+  tree: string,
+  background: string,
+  garland: string,
+
   toysData: Toy[],
 }
 
-export const defaultCatalogState: catalogState = {
+export const defaultState: appState = {
   colors: {
     white: false,
     yellow: false,
@@ -84,23 +95,15 @@ export const defaultCatalogState: catalogState = {
   sort: 'name-max',
   countSelected: 0,
   search: '',
-  toysData: toysData,
-}
 
-
-export interface settings {
-  snow: boolean,
-  music: boolean,
-}
-
-export interface treeState {
-  [x: string]: any;
-  settings: settings,
-}
-
-export const defaultTreeState: treeState = {
   settings: {
     snow: false,
     music: false,
-  }
-};
+  },
+  tree: 'tree-1',
+  background: 'background-1',
+  garland: 'garland-1',
+
+  toysData: toysData,
+}
+

@@ -1,12 +1,27 @@
-.main {
+.christmas-tree-main {
   display: flex;
   justify-content: center;
 
   width: 100vw;
   height: auto;
-  padding: 5px 20px;
+  padding: 5px 20px; 
 }
 
-.main-container {
+.christmas-tree-main-container {
+  display: flex;
+  justify-content: space-between;
   width: 1200px;
+  gap: 10px;
+}
+
+.left-side {
+  width: 30%;
+}
+
+.right-side {
+  width: 30%;
+}
+
+.main-side {
+  width: 40%;
 }

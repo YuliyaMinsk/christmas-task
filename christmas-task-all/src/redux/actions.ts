@@ -1,5 +1,7 @@
 import { createAction } from "@reduxjs/toolkit";
 
+// CATALOG
+
 export const FILTER_COLOR_WHITE = 'FILTER_COLOR_WHITE';
 export const FILTER_COLOR_YELLOW = 'FILTER_COLOR_YELLOW';
 export const FILTER_COLOR_RED = 'FILTER_COLOR_RED';
@@ -67,3 +69,19 @@ export const closeModal = createAction(CLOSE_MODAL);
 
 export const searchCards = createAction<string, typeof SEARCH_CARDS>(SEARCH_CARDS);
 export const searchClear = createAction(SEARCH_CLEAR);
+
+// TREE
+
+export const SETTINGS_SNOW = 'SETTINGS_SNOW';
+export const SETTINGS_MUSIC = 'SETTINGS_MUSIC';
+
+export const SELECT_BACKGROUND = 'SELECT_BACKGROUND';
+export const SELECT_TREE = 'SELECT_TREE';
+export const SELECT_GARLAND = 'SELECT_GARLAND';
+
+export const selectSnow = createAction(SETTINGS_SNOW);
+export const selectMusic = createAction(SETTINGS_MUSIC);
+
+export const selectBackground = createAction<string, typeof SELECT_BACKGROUND>(SELECT_BACKGROUND);
+export const selectTree = createAction<string, typeof SELECT_TREE>(SELECT_TREE);
+export const selectGarland = createAction<string, typeof SELECT_GARLAND>(SELECT_GARLAND);

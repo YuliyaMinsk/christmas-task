@@ -1,15 +1,15 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
 
-import { Constants } from '../../../../abstract/Constants';
+import { Constants } from '../../../../common/Constants';
 import ToyItem from './toy-item/Toy-item';
-import { catalogState, Toy } from "../../../../abstract/types";
+import { appState, Toy } from "../../../../common/types";
 import './Toy-catalog.scss';
 import Modal from './modal/Modal';
 
 function ToyCatalog() {
 
-  const { colors, shapes, size, favorite, count, year, sort, countSelected, search, toysData } = useSelector((state: catalogState) => state);
+  const { colors, shapes, size, favorite, count, year, sort, countSelected, search, toysData } = useSelector((state: appState) => state);
 
   let toysFilteredData = toysData.filter(item => {
     if (((colors.white) && (item.color === 'белый')) || 

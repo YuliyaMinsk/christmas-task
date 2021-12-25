@@ -1,12 +1,12 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
 
-import { catalogState } from '../../../abstract/types';
+import { appState } from '../../../common/types';
 import './Count-selected.scss';
 
 function CountSelected() {
 
-  const { countSelected } = useSelector((state: catalogState) => state);
+  const { countSelected } = useSelector((state: appState) => state);
 
   return (
     <div className="count-select">

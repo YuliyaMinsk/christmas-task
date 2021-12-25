@@ -1,14 +1,14 @@
 import React, { useMemo } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 
-import { treeState } from '../../../../abstract/types';
+import { appState } from '../../../../common/types';
+import { selectMusic } from '../../../../redux/actions';
 import christmasAudio from '../../../../assets/audio/audio.mp3'
-import { selectMusic } from '../../../../redux/actions-tree';
 import './Music.scss';
 
 function Music() {
 
-  const { settings } = useSelector((state: treeState) => state.treeReducer);
+  const { settings } = useSelector((state: appState) => state);
   
   const audio = useMemo(() => new Audio(christmasAudio), []);
 

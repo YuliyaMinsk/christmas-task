@@ -1,0 +1,49 @@
+@import "../../../common/sass/placeholder";
+
+.tree-select {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+}
+
+.tree-box {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.background-tree{
+  position: relative;
+  width: 110px;
+  height: 110px;
+  border: 0;
+  outline: 0;  
+  border-radius: 25px;
+  background-color: rgba(34, 84, 177, 0.3);
+  backdrop-filter: blur(6px);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: auto 90px;
+  cursor: pointer;
+  @extend %transition;
+
+  &.tree-1 {
+    background-image: url("../../../assets/images/tree/1.png");
+  }
+  &.tree-2 {
+    background-image: url("../../../assets/images/tree/2.png");
+  }
+  &.tree-3 {
+    background-image: url("../../../assets/images/tree/3.png");
+  }
+  &.tree-4 {
+    background-image: url("../../../assets/images/tree/4.png");
+  }
+  &.tree-5 {
+    background-image: url("../../../assets/images/tree/5.png");
+  }
+  &.tree-6 {
+    background-image: url("../../../assets/images/tree/6.png");
+  }
+}

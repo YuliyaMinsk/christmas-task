@@ -3,16 +3,16 @@ import { useDispatch, useSelector } from 'react-redux';
 import Nouislider from "nouislider-react";
 import "nouislider/distribute/nouislider.css";
 
-import { Constants } from '../../../../abstract/Constants';
+import { Constants } from '../../../../common/Constants';
 import { allClear, filterColorBlue, filterColorGreen, filterColorRed, filterColorWhite, filterColorYellow, filterFavorite, 
   filterShapeBall, filterShapeBell, filterShapeCone, filterShapeFigure, filterShapeSnowflake, filterSizeBig, 
-  filterSizeMedium, filterSizeSmall, rangeCount, rangeYear, setToDefault, sortCards } from '../../../../redux/actions-catalog';
-import { catalogState } from '../../../../abstract/types';
+  filterSizeMedium, filterSizeSmall, rangeCount, rangeYear, setToDefault, sortCards } from '../../../../redux/actions';
+import { appState } from '../../../../common/types';
 import './Filter.scss';
 
 function Filter() {
 
-  const { colors, shapes, size, favorite, count, year  } = useSelector((state: catalogState) => state);
+  const { colors, shapes, size, favorite, count, year  } = useSelector((state: appState) => state);
 
   const isActiveButtonWhite= (colors.white) ? 'active' : '';
   const isActiveButtonYellow = (colors.yellow) ? 'active' : '';

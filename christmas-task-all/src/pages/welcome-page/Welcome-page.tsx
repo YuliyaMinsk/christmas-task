@@ -1,7 +1,7 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 
-import { Constants } from '../../abstract/Constants';
+import { Constants } from '../../common/Constants';
 import './Welcome-page.scss';
 
  function WelcomePage() {

@@ -26,4 +26,10 @@ export class Constants {
   static SORT_YEAR_MIN = 'По году приобретения, по убыванию';
   
   static SORRY_TEXT = 'Извините, совпадений не обнаружено';
+
+  static SELECT_TREE = 'Выберите ёлку: ';
+  static SELECT_BACKGROUND = 'Выберите фон: ';
+  static SELECT_GARLAND = 'Выберите гирлянду: ';
+  static SELECT_TOY = 'Развесьте игрушки: ';
+  static SELECT_HISTORY = 'Вы нарядили: ';
 }

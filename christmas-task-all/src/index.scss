@@ -1,6 +1,6 @@
-@import "abstract/sass/constants";
-@import "abstract/sass/placeholder";
-@import "abstract/sass/mixin";
+@import "common/sass/constants";
+@import "common/sass/placeholder";
+@import "common/sass/mixin";
 
 body {
   margin: 0;
@@ -8,7 +8,7 @@ body {
 
   width: 100vw;
   height: 100vh;
-  overflow: hidden;
+  // overflow: hidden;
   background-image: url('./assets/images/background-pages2.jpg');
   background-repeat: repeat;
 

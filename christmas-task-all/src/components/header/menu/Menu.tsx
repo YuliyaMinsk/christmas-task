@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link, useLocation } from 'react-router-dom'
 
-import { Constants } from '../../../abstract/Constants';
+import { Constants } from '../../../common/Constants';
 import Search from '../search/Search';
 import CountSelected from '../count-selected/Count-selected';
 import './Menu.scss';

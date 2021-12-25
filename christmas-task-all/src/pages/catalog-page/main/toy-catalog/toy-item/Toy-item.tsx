@@ -1,13 +1,13 @@
 import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 
-import { catalogState, Toy } from '../../../../../abstract/types';
-import { select } from '../../../../../redux/actions-catalog';
+import { appState, Toy } from '../../../../../common/types';
+import { select } from '../../../../../redux/actions';
 import './Toy-item.scss';
 
 function ToyItem(props: Toy) { 
 
-  const { toysData } = useSelector((state: catalogState) => state);
+  const { toysData } = useSelector((state: appState) => state);
 
   const selectCardClass = toysData[parseInt(props.id)-1].select ? 'selected' : '';
 

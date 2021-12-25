@@ -1,17 +1,17 @@
-import { combineReducers, createStore } from '@reduxjs/toolkit';
+import { createStore } from '@reduxjs/toolkit';
 import { devToolsEnhancer } from 'redux-devtools-extension';
 
-import { catalogState, defaultCatalogState, defaultTreeState, treeState } from '../abstract/types';
-import catalogReducer from './reducer-catalog';
-import treeReducer from './reducer-tree';
+import { appState, defaultState } from '../common/types';
+import reducer from './reducer';
 
 const templateData = localStorage.getItem('save-settings');
 
-const startState: catalogState = templateData !== null ? JSON.parse(templateData) : defaultCatalogState; 
+const startState: appState = templateData !== null ? JSON.parse(templateData) : defaultState; 
 
-const store = createStore(combineReducers({ catalogReducer, treeReducer}), 
-  { catalogReducer: startState, treeReducer: defaultTreeState }, 
-  devToolsEnhancer({}));
+const store = createStore(reducer, startState, devToolsEnhancer({}));
+
+console.log('1', store); // TO DELETE
+console.log('2', startState); // TO DELETE
 
 store.subscribe(() => {
   localStorage.setItem('save-settings', JSON.stringify(store.getState()));

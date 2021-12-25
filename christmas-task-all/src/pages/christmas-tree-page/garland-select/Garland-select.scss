@@ -1,0 +1,42 @@
+@import "../../../common/sass/placeholder";
+
+.garland-select {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+}
+
+.garland-box {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.garland-case {
+  position: relative;
+  width: 20px;
+  height: 20px;
+  margin-right: 20px;
+  border: 0;
+  outline: 0;  
+  border-radius: 25px;  
+  cursor: pointer;
+  @extend %transition;
+
+  &.garland-multicolor {
+    background: linear-gradient(124deg, #ff2400, #e81d1d, #e8b71d, #e3e81d, #1de840, #1ddde8, #2b1de8);
+  }
+  &.garland-red {
+    background-color: #e81d1d;
+  }
+  &.garland-blue {
+    background-color: #2b1de8;
+  }
+  &.garland-yellow {
+    background-color: #e3e81d;
+  }
+  &.garland-green {
+    background-color: #1de840;
+  }
+
+}
