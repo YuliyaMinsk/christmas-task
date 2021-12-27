@@ -7,6 +7,7 @@ import CatalogPage from './pages/catalog-page/Catalog-page';
 import ChristmasTreePage from './pages/christmas-tree-page/Christmas-tree-page';
 import WelcomePage from './pages/welcome-page/Welcome-page';
 import SnowFall from './pages/christmas-tree-page/settings/snow/snow-fall/Snow-fall';
+import './App.scss';
 
 function App() {
   

@@ -102,7 +102,7 @@ export const defaultState: appState = {
   },
   tree: 'tree-1',
   background: 'background-1',
-  garland: 'garland-1',
+  garland: 'off-light',
 
   toysData: toysData,
 }

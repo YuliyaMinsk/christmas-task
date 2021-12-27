@@ -11,6 +11,18 @@ $s3:"";
 		$s3: $s3 + ",";
 	}
 }
+
+.snow-container {
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 100;
+	overflow: hidden;
+	width: inherit;
+	height: inherit;
+	pointer-events: none;
+}
+
 .snow {
 	border-radius: 50%;
 	opacity: 0.8;
@@ -20,26 +32,31 @@ $s3:"";
 	animation-timing-function: linear;
 	animation-iteration-count: infinite;
 }
+
 .layer1 {
 	width: 0.8rem;
 	height: 0.8rem;
-	filter:blur(1.5px);
+	filter: blur(1.5px);
 	box-shadow: #{$s1};
 	animation-duration: 6s;
 }
+
 .layer1.a {
 	animation-delay: -3s;
 }
+
 .layer2 {
 	width: 0.4rem;
 	height: 0.4rem;
-	filter:blur(1px);
+	filter: blur(1px);
 	box-shadow: #{$s2};
 	animation-duration: 8s;
 }
+
 .layer2.a {
 	animation-delay: -4s;
 }
+
 .layer3 {
 	width: 0.2rem;
 	height: 0.2rem;
@@ -47,12 +64,11 @@ $s3:"";
 	box-shadow: #{$s3};
 	animation-duration: 10s;
 }
+
 .layer3.a {
 	animation-delay: -5s;
 }
+
 @keyframes fall {
 	100% {transform: translateY(200vh); }
-}
-.snow-container {
-	overflow: hidden;
 }

@@ -84,6 +84,12 @@ const reducer = createReducer(defaultState, {
     state.sort = defaultState.sort;
     state.countSelected = defaultState.countSelected;
     state.toysData = defaultState.toysData;
+
+    state.settings.snow = defaultState.settings.snow;
+    state.settings.music = defaultState.settings.music;
+    state.tree = defaultState.tree;
+    state.background = defaultState.background;
+    state.garland = defaultState.garland;
   },
 
   [SELECT]: (state: appState, { payload }: { payload: string }) => {

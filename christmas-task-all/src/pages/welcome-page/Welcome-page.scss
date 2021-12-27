@@ -3,6 +3,7 @@
 @import "../../common/sass/mixin";
 
 .welcome-page {
+  position: relative;
   display: flex;
   flex-direction: column;
   justify-content: center;

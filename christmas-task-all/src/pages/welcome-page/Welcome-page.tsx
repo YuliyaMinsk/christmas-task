@@ -2,6 +2,7 @@ import React from 'react';
 import { useNavigate } from 'react-router-dom';
 
 import { Constants } from '../../common/Constants';
+import SnowFall from '../christmas-tree-page/settings/snow/snow-fall/Snow-fall';
 import './Welcome-page.scss';
 
  function WelcomePage() {
@@ -9,7 +10,7 @@ import './Welcome-page.scss';
   const navigate = useNavigate();
 
   return (
-    <div className="welcome-page">      
+    <div className="welcome-page">            
       <p className="welcome-text">{Constants.WELCOME_TXT}</p>
       
       <button className="welcome-button" onClick={() => navigate("/catalog")}>{Constants.WELCOME_BUTTON}</button>

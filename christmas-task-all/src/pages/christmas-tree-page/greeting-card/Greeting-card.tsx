@@ -22,10 +22,11 @@ import background10 from '../../../assets/images/bg/10.jpg'
 
 import { appState } from '../../../common/types';
 import './Greeting-card.scss';
+import SnowFall from '../settings/snow/snow-fall/Snow-fall';
 
  function GreetingCard() {
 
-  const { tree, background, garland } = useSelector((state: appState) => state);
+  const { tree, background, garland, settings } = useSelector((state: appState) => state);
 
   function getUrlTree(tree: string) {
     switch (tree) {
@@ -79,8 +80,9 @@ import './Greeting-card.scss';
   const circleSize = 500;
 
   return (
-    <div className='greeting-card'>      
+    <div className='greeting-card'>    
       <div className='selected-background' style={{ backgroundImage: `url(${urlBackground})` }}>
+        { settings.snow && <SnowFall/> }  
         <img className='selected-tree' src={urlTree} />
 
         <div className="light">
