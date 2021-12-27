@@ -1,13 +1,18 @@
 import React from 'react';
 
-import Main from "./main/Main";
+import Filter from './filter/Filter';
+import ToyCatalog from './toy-catalog/Toy-catalog';
+import './Catalog-page.scss';
 
  function CatalogPage() {
 
   return (
-    <>
-      <Main/>
-    </>
+    <main className="main">
+      <div className="main-container">
+        <Filter />
+        <ToyCatalog />
+      </div>
+    </main>
   );
 }
 

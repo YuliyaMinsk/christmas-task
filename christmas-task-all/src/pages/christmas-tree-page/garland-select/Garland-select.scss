@@ -1,3 +1,4 @@
+@import "../../../common/sass/constants";
 @import "../../../common/sass/placeholder";
 
 .garland-select {
@@ -38,5 +39,7 @@
   &.garland-green {
     background-color: #1de840;
   }
-
+  &.garland-off {
+    background-color: $color-disabled;
+  }
 }

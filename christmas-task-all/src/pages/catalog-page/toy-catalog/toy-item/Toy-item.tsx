@@ -1,8 +1,8 @@
 import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 
-import { appState, Toy } from '../../../../../common/types';
-import { select } from '../../../../../redux/actions';
+import { appState, Toy } from '../../../../common/types';
+import { select } from '../../../../redux/actions';
 import './Toy-item.scss';
 
 function ToyItem(props: Toy) { 

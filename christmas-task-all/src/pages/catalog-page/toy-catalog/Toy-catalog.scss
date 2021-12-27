@@ -1,9 +1,9 @@
-@import "../../../../common/sass/constants";
+@import "../../../common/sass/constants";
 
 .toy-list {
   display: flex;
   flex-wrap: wrap;
-  gap: 20px;
+  gap: 15px 10px;
 }
 
 .sorry-text {

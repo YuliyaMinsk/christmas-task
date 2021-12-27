@@ -1,7 +1,7 @@
 import React from 'react';
 import { useDispatch } from 'react-redux';
 
-import { closeModal } from '../../../../../redux/actions';
+import { closeModal } from '../../../../redux/actions';
 import './Modal.scss';
 
 function Modal() {

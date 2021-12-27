@@ -12,10 +12,11 @@
 .christmas-tree-main-container {
   display: flex;
   justify-content: space-between;
+  align-items: flex-start;
   width: 80%;
   gap: 10px;
 
-  @media screen and (max-width: $mq3) {
+  @media screen and (max-width: $mq2) {
     flex-direction: column;
     width: 100%;
   }
@@ -23,14 +24,14 @@
 
 .left-side {
   width: 25%;
-  @media screen and (max-width: $mq3) {
+  @media screen and (max-width: $mq2) {
     width: 100%;
   }
 }
 
 .right-side {
   width: 25%;
-  @media screen and (max-width: $mq3) {
+  @media screen and (max-width: $mq2) {
     width: 100%;
   }
 }
@@ -40,7 +41,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  @media screen and (max-width: $mq3) {
+  @media screen and (max-width: $mq2) {
     width: 100%;
   }
 }

@@ -1,11 +1,11 @@
-@import "../../../../../common/sass/constants";
+@import "../../../../common/sass/constants";
 
 .toy-item {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  width: 260px;
-  height: 260px;
+  width: 255px;
+  height: 255px;
   padding: 10px;
   padding-left: 10px;
   border-radius: 10px;

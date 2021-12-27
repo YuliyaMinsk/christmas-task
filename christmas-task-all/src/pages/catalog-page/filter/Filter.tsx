@@ -3,11 +3,11 @@ import { useDispatch, useSelector } from 'react-redux';
 import Nouislider from "nouislider-react";
 import "nouislider/distribute/nouislider.css";
 
-import { Constants } from '../../../../common/Constants';
+import { Constants } from '../../../common/Constants';
 import { allClear, filterColorBlue, filterColorGreen, filterColorRed, filterColorWhite, filterColorYellow, filterFavorite, 
   filterShapeBall, filterShapeBell, filterShapeCone, filterShapeFigure, filterShapeSnowflake, filterSizeBig, 
-  filterSizeMedium, filterSizeSmall, rangeCount, rangeYear, setToDefault, sortCards } from '../../../../redux/actions';
-import { appState } from '../../../../common/types';
+  filterSizeMedium, filterSizeSmall, rangeCount, rangeYear, setToDefault, sortCards } from '../../../redux/actions';
+import { appState } from '../../../common/types';
 import './Filter.scss';
 
 function Filter() {

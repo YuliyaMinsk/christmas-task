@@ -17,6 +17,7 @@ import './Garland-select.scss';
         <button className='garland-case garland-blue' onClick={() => dispatch(selectGarland('garland-blue'))}></button>
         <button className='garland-case garland-yellow' onClick={() => dispatch(selectGarland('garland-yellow'))}></button>
         <button className='garland-case garland-green' onClick={() => dispatch(selectGarland('garland-green'))}></button>
+        <button className='garland-case garland-off' onClick={() => dispatch(selectGarland('off-light'))}></button>
       </div>
     </div>
   );

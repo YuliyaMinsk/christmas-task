@@ -25,7 +25,7 @@ import './Greeting-card.scss';
 
  function GreetingCard() {
 
-  const { tree, background } = useSelector((state: appState) => state);
+  const { tree, background, garland } = useSelector((state: appState) => state);
 
   function getUrlTree(tree: string) {
     switch (tree) {
@@ -59,10 +59,50 @@ import './Greeting-card.scss';
 
   const urlBackground = getUrlBackground(background);
 
+  const ulList = new Array(20).fill("line");
+  const listItems= new Array(24).fill("li-element"); 
+  const colors = ["red", "yellow", "blue", "green"];  
+
+  function getGarlandColor(garlandSelected: string) {
+    switch (garland) {
+      case 'garland-red': return 'red';
+      case 'garland-green': return 'green';
+      case 'garland-blue': return 'blue';
+      case 'garland-yellow': return 'yellow';
+      case 'garland-multicolor': return colors[(Math.floor(Math.random() * 4))];
+      default: return 'off-light';
+    }
+  }
+
+  const rot = 32;
+  const angle = 5;
+  const circleSize = 500;
+
   return (
     <div className='greeting-card'>      
       <div className='selected-background' style={{ backgroundImage: `url(${urlBackground})` }}>
         <img className='selected-tree' src={urlTree} />
+
+        <div className="light">
+        { 
+          ulList.map((ul, ulIndex) => 
+            <ul className = {ul} style ={{ top: `${160 + -30 * ulIndex}px` }}>
+
+            { (garland !== 'off-light') && listItems.map((li, index) => 
+             <li 
+                className = {(((index) >= (1 + ulIndex / 2)) && ((index) <= (22 - ulIndex / 2))) ? (getGarlandColor(garland)) : `off-light`} 
+                style ={{ 
+                animationDuration: `${Math.random() * 0.8 + 0.1}s`,
+                animationIterationCount: `infinite`,
+                animationName: `lightning`,                 
+                transform: `rotate(${(rot  + angle * index) * 1}deg) translate(${circleSize / 2}px) rotate(${(rot  + angle * index) * -1}deg)`,
+
+              }}
+              />)}
+              
+            </ul>)
+          }
+        </div>
       </div>
     </div>
   );

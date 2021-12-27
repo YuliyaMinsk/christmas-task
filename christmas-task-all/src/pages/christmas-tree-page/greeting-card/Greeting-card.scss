@@ -1,3 +1,8 @@
+$green: #24fd48;
+$yellow: #e5e900;
+$red: #ff2c3e;
+$blue: #3cd1ff;
+
 .greeting-card {
   width: 100%;
   display: flex;
@@ -13,7 +18,7 @@
   position: relative;
   margin: 10px;
   width: 600px;
-  height: 600px;
+  height: 700px;
   border: 0;
   outline: 0;  
   background-size: auto 100%;
@@ -21,8 +26,73 @@
   background-position: center center;
 }
 
-.selected-tree {
+.selected-tree { 
   display: block;
-  width: 406px;
-  height: 580px;
+  width: 455px;
+  height: 650px;
+}
+
+
+// Garland
+.light {
+  position: absolute;
+  top: 50px;
+  left: 100px;
+}
+
+$circle-size: 400px;
+$item-size: 8px;
+
+.line{
+  position: absolute;
+  width:  $circle-size;
+  height: $circle-size;
+  border-radius: 50%;
+  padding: 0; 
+  list-style: none;  
+}
+
+
+li {
+  display: block;
+  position: absolute;
+  top:  50%; 
+  left: 50%;
+  margin: -($item-size / 2);
+  width:  $item-size;
+  height: $item-size;
+  border-radius: 50%;
+  list-style: none;
+  }
+
+.red {
+  background-color: $red;
+}
+
+.green {
+  background-color: $green;
+}
+
+.yellow {
+  background-color: $yellow;
+}
+
+.blue {
+  background-color: $blue;
+}
+
+.off-light {
+  background-color: transparent;
+}
+
+@keyframes lightning {
+    0% {
+      opacity: 0.3;
+    }
+    50% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0.3;
+    }
 }

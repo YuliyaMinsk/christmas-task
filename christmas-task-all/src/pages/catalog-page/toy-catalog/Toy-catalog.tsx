@@ -1,9 +1,9 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
 
-import { Constants } from '../../../../common/Constants';
+import { Constants } from '../../../common/Constants';
 import ToyItem from './toy-item/Toy-item';
-import { appState, Toy } from "../../../../common/types";
+import { appState, Toy } from "../../../common/types";
 import './Toy-catalog.scss';
 import Modal from './modal/Modal';
 
