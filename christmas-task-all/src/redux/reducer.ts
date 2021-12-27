@@ -116,16 +116,13 @@ const reducer = createReducer(defaultState, {
     state.settings.music = !state.settings.music;
   },
   [SELECT_TREE]: (state: appState, { payload }: { payload: string } ) => {
-    state.tree = payload;
-    
+    state.tree = payload;    
   },
   [SELECT_BACKGROUND]: (state: appState, { payload }: { payload: string } ) => {
     state.background = payload;
-
   },
   [SELECT_GARLAND]: (state: appState, { payload }: { payload: string } ) => {
     state.garland = payload;
-
   },
 });
 

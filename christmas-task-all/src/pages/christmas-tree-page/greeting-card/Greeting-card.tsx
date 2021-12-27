@@ -64,7 +64,7 @@ import './Greeting-card.scss';
   const colors = ["red", "yellow", "blue", "green"];  
 
   function getGarlandColor(garlandSelected: string) {
-    switch (garland) {
+    switch (garlandSelected) {
       case 'garland-red': return 'red';
       case 'garland-green': return 'green';
       case 'garland-blue': return 'blue';
