@@ -10,9 +10,7 @@ function Search() {
   
   const { search } = useSelector((state: appState) => state);
 
-  console.log('3', search); // TO DELETE
-
-  const isActiveCloseSearch = ((search) && (search.length)) ? 'active' : '';
+  const classesCloseSearch = ((search) && (search.length)) ? 'clear-search active' : 'clear-search';
   
   const dispatch = useDispatch();
 
@@ -24,9 +22,9 @@ function Search() {
       autoFocus
       placeholder = {Constants.MENU_SEARCH} 
       value = {search}
-      onChange = {(e) => dispatch(searchCards(e.target.value))}
+      onChange = {(event) => dispatch(searchCards(event.target.value))}
     />
-    <span className={"clear-search " + isActiveCloseSearch} onClick={() => dispatch(searchClear())}>&times;</span>
+    <span className={classesCloseSearch} onClick={() => dispatch(searchClear())}>&times;</span>
     </div>
   );
 }

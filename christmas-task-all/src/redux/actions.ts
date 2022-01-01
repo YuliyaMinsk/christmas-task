@@ -2,21 +2,11 @@ import { createAction } from "@reduxjs/toolkit";
 
 // CATALOG
 
-export const FILTER_COLOR_WHITE = 'FILTER_COLOR_WHITE';
-export const FILTER_COLOR_YELLOW = 'FILTER_COLOR_YELLOW';
-export const FILTER_COLOR_RED = 'FILTER_COLOR_RED';
-export const FILTER_COLOR_BLUE = 'FILTER_COLOR_BLUE';
-export const FILTER_COLOR_GREEN = 'FILTER_COLOR_GREEN';
+export const FILTER_COLOR = 'FILTER_COLOR';
 
-export const FILTER_SHAPE_BALL = 'FILTER_SHAPE_BALL';
-export const FILTER_SHAPE_BELL = 'FILTER_SHAPE_BELL';
-export const FILTER_SHAPE_CONE = 'FILTER_SHAPE_CONE';
-export const FILTER_SHAPE_SNOWFLAKE = 'FILTER_SHAPE_SNOWFLAKE';
-export const FILTER_SHAPE_FIGURE = 'FILTER_SHAPE_FIGURE';
+export const FILTER_SHAPE = 'FILTER_SHAPE';
 
-export const FILTER_SIZE_BIG = 'FILTER_SIZE_BIG';
-export const FILTER_SIZE_MEDIUM = 'FILTER_SIZE_MEDIUM';
-export const FILTER_SIZE_SMALL = 'FILTER_SIZE_SMALL';
+export const FILTER_SIZE = 'FILTER_SIZE';
 
 export const FILTER_FAVORITE = 'FILTER_FAVORITE';
 
@@ -36,21 +26,11 @@ export const CLOSE_MODAL = 'CLOSE_MODAL';
 export const SEARCH_CARDS = 'SEARCH_CARDS';
 export const SEARCH_CLEAR = 'SEARCH_CLEAR';
 
-export const filterColorWhite = createAction(FILTER_COLOR_WHITE);
-export const filterColorYellow = createAction(FILTER_COLOR_YELLOW);
-export const filterColorRed = createAction(FILTER_COLOR_RED);
-export const filterColorBlue = createAction(FILTER_COLOR_BLUE);
-export const filterColorGreen = createAction(FILTER_COLOR_GREEN);
+export const filterColor = createAction<string, typeof FILTER_COLOR>(FILTER_COLOR);
 
-export const filterShapeBall = createAction(FILTER_SHAPE_BALL);
-export const filterShapeBell = createAction(FILTER_SHAPE_BELL);
-export const filterShapeCone = createAction(FILTER_SHAPE_CONE);
-export const filterShapeSnowflake = createAction(FILTER_SHAPE_SNOWFLAKE);
-export const filterShapeFigure = createAction(FILTER_SHAPE_FIGURE);
+export const filterShape = createAction<string, typeof FILTER_SHAPE>(FILTER_SHAPE);
 
-export const filterSizeBig = createAction(FILTER_SIZE_BIG);
-export const filterSizeMedium = createAction(FILTER_SIZE_MEDIUM);
-export const filterSizeSmall = createAction(FILTER_SIZE_SMALL);
+export const filterSize = createAction<string, typeof FILTER_SIZE>(FILTER_SIZE);
 
 export const filterFavorite = createAction(FILTER_FAVORITE);
 

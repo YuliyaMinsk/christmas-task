@@ -9,13 +9,13 @@ function Snow() {
 
   const { settings } = useSelector((state: appState) => state);
   
-  const isActiveButtonSnow = (settings.snow) ? 'active' : '';
+  const classesButtonSnow = (settings.snow) ? 'button-snow active' : 'button-snow';
 
   const dispatch = useDispatch();
 
   return (
     <>      
-      <button className={"button-snow " + isActiveButtonSnow} onClick={() => dispatch(selectSnow())}></button>
+      <button className={classesButtonSnow} onClick={() => dispatch(selectSnow())}></button>
     </>
   );
 }
