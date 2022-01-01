@@ -13,19 +13,21 @@ function Music() {
   const audio = useMemo(() => new Audio(christmasAudio), []);
 
   if (settings.music) {
-    audio.play();
+    if (audio.paused) {
+      audio.play();
+    }
   } else {
     audio.pause();
     audio.currentTime = 0;
   }
 
-  const isActiveButtonMusic = (settings.music) ? 'active' : '';
+  const classesButtonMusic = (settings.music) ? 'button-music active' : 'button-music';
 
   const dispatch = useDispatch();
 
   return (
     <>      
-      <button className={"button-music " + isActiveButtonMusic} onClick={() => dispatch(selectMusic())}></button>
+      <button className={classesButtonMusic} onClick={() => dispatch(selectMusic())}></button>
     </>
   );
 }

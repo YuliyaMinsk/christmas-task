@@ -3,7 +3,9 @@
 .toy-list {
   display: flex;
   flex-wrap: wrap;
-  gap: 15px 10px;
+  gap: 15px 15px;
+  justify-content: center;
+  align-content: center;
 }
 
 .sorry-text {

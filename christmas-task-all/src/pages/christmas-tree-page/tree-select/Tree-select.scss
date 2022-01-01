@@ -1,4 +1,5 @@
 @import "../../../common/sass/placeholder";
+@import "../../../common/sass/constants";
 
 .tree-select {
   display: flex;
@@ -27,6 +28,11 @@
   background-size: auto 90px;
   cursor: pointer;
   @extend %transition;
+
+  &:hover {
+    color: $color-primary;
+    background-color: rgba(31, 83, 179, 0.486);
+  }
 
   &.tree-1 {
     background-image: url("../../../assets/images/tree/1.png");

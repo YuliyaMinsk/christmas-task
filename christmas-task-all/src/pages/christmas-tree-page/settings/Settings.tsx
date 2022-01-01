@@ -17,7 +17,7 @@ import './Settings.scss';
         <Music />
         <Snow />
       </div>   
-      <button className="button-default" onClick={() => {dispatch(allClear()); localStorage.clear();}}>{Constants.FILTER_SETTINGS}</button>
+      <button className="button-default page-tree" onClick={() => {dispatch(allClear()); localStorage.clear();}}>{Constants.FILTER_SETTINGS}</button>
     </div>
   );
 }

@@ -191,6 +191,9 @@
   cursor: pointer;
   @include font($font4, #{$font4 + 0.5rem}, 300);
   @extend %transition;
+  &.page-tree {
+    border: none;
+  }
   &:hover {
     color: $color-primary;
     background-color: rgba(31, 83, 179, 0.3);
@@ -227,7 +230,7 @@
 
 .range-num {
   display: inline-block;
-  width: 40px;
+  width: 60px;
   text-align: center;
   padding: 5px 10px;
   border-radius: 10px;
@@ -236,7 +239,7 @@
 
 .noUi-target {
   display: inline-block;
-  width: 260px;
+  width: 160px;
   margin-top: 10px;
   margin-bottom: 10px;
   margin-left: 20px;

@@ -4,8 +4,11 @@ import { Provider } from "react-redux";
 
 import App from './App';
 import store from './redux/store';
-import './index.scss';
 import { BrowserRouter } from 'react-router-dom';
+import { showEstimate } from './common/estimate';
+import './index.scss';
+
+showEstimate();
 
 ReactDOM.render(
   <React.StrictMode>
