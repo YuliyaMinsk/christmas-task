@@ -86,14 +86,22 @@ function ToyCatalog() {
 
   if (sort === 'sort-name-max') {
     toysFilteredData = toysFilteredData.sort((a, b) => {
-      if (a.name > b.name) {return 1;}
-      if (a.name < b.name) {return -1;}
+      if (a.name > b.name) {
+        return 1;
+      }
+      if (a.name < b.name) {
+        return -1;
+      }
       return 0;
     });
   } else if (sort === 'sort-name-min') {
     toysFilteredData = toysFilteredData.sort((a, b) => {
-      if (a.name < b.name) {return 1;}
-      if (a.name > b.name) {return -1;}
+      if (a.name < b.name) {
+        return 1;
+      }
+      if (a.name > b.name) {
+        return -1;
+      }
       return 0;
     });
   } else if (sort === 'sort-year-max') {

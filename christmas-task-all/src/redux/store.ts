@@ -6,7 +6,7 @@ import reducer from './reducer';
 
 const templateData = localStorage.getItem('save-settings');
 
-const startState: appState = templateData !== null ? JSON.parse(templateData) : defaultState; 
+const startState: appState = templateData ? JSON.parse(templateData) : defaultState; 
 
 const store = createStore(reducer, startState, devToolsEnhancer({}));
 

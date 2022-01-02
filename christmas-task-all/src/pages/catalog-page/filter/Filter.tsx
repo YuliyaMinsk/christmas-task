@@ -87,8 +87,8 @@ function Filter() {
       </div>
       <div className="filter-sort">
         <h3 className="filter-title">{Constants.FILTER_SORT}</h3>
-        <select className="filter-sort-select" onChange={(e) => dispatch(sortCards(e.target.value))}>
-          <option selected disabled>{Constants.SORT_SELECT}</option>
+        <select className="filter-sort-select" defaultValue={Constants.SORT_SELECT} onChange={(event) => dispatch(sortCards(event.target.value))}>
+          <option disabled>{Constants.SORT_SELECT}</option>
           <option value="sort-name-max">{Constants.SORT_NAME_MAX}</option>
           <option value="sort-name-min">{Constants.SORT_NAME_MIN}</option>
           <option value="sort-year-max">{Constants.SORT_YEAR_MAX}</option>

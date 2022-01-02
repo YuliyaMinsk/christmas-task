@@ -18,7 +18,7 @@ import './Toy-select.scss';
   }
 
   const toyElements = toyCaseList.map((item, index) => 
-  (<div className={`toy-case toy-${item.id}`}>
+  (<div key={index} className={`toy-case toy-${item.id}`}>
     <p className='toy-count'>{item.count}</p>
     <img className='toy-card-image' src={process.env.PUBLIC_URL + '/toys/' + item.id + '.png'} alt='toy'></img>
   </div>));

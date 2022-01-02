@@ -88,10 +88,11 @@ import SnowFall from '../settings/snow/snow-fall/Snow-fall';
         <div className="light">
         { 
           ulList.map((ul, ulIndex) => 
-            <ul className = {ul} style ={{ top: `${160 + -30 * ulIndex}px` }}>
+            <ul key={ulIndex} className = {ul} style ={{ top: `${160 + -30 * ulIndex}px` }}>
 
             { (garland !== 'off-light') && listItems.map((li, index) => 
              <li 
+                key={index} 
                 className = {(((index) >= (1 + ulIndex / 2)) && ((index) <= (22 - ulIndex / 2))) ? (getGarlandColor(garland)) : `off-light`} 
                 style ={{ 
                 animationDuration: `${Math.random() * 0.8 + 0.1}s`,
